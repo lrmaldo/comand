@@ -1,0 +1,25 @@
+
+
+table  tienda
+id (int)
+nombre (string 500)
+direccion (text)
+descripcion (text)
+telefono (string 250)
+correo (string 250)
+facebook (string 500)
+
+
+
+
+productos
+id (int)
+titulo(string 255)
+descripcion (text)
+url_imagen (string 500)
+precio (float)
+
+carrucel 
+id (int)
+titulo (string 250)
+descripcion (250)
