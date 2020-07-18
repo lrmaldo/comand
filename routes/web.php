@@ -11,10 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('/','InicioController@index');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('home','HomeController');
+
+Route::resource('carrusel',"CarruselController");
+
+Route::resource('datos','DatosController');
+//Route::get('carrusel/create',"CarruselController@create")->name('carrusel/create');
