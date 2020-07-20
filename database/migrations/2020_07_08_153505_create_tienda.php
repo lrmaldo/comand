@@ -20,6 +20,7 @@ class CreateTienda extends Migration
             $table->string('telefono');
             $table->string('correo');
             $table->string('facebook',500);
+            $table->timestamps();
         });
     }
     /* 

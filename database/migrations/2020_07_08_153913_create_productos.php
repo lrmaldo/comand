@@ -20,6 +20,7 @@ class CreateProductos extends Migration
             $table->string('url_imagen');
             //$table->string('correo');
             $table->float('precio',8,2);
+            $table->timestamps();
         });
     }
 

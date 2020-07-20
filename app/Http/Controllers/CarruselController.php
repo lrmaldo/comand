@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\carrucel;
+use Redirect;
 
 class CarruselController extends Controller
 {
@@ -12,6 +13,11 @@ class CarruselController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $carrusel  =  carrucel::all();
@@ -36,7 +42,28 @@ class CarruselController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
+        if ($request->hasFile('url_imagen')) {
+
+      
+
+            $image = $request->file('url_imagen');
+            $name = 'carrusel'.time().'.'.$image->getClientOriginalExtension();
+            $destinationPath = public_path('/imagenes/carrusel/');
+            $image->move($destinationPath, $name);
+
+            carrucel::create([
+                'titulo' => $request->input('titulo'),
+                'descripcion' => $request->input('descripcion'),
+                'url_imagen' =>$request->input('url_imagen'),
+                'url_imagen' =>$request->root().'/imagenes/carrusel'.'/'.$name,
+                
+            
+        ]);
+            
+               
+                return  Redirect::to('/carrusel');
+        }
     }
 
     /**
@@ -58,7 +85,8 @@ class CarruselController extends Controller
      */
     public function edit($id)
     {
-        //
+        $carrusel = carrucel::find($id);
+        return view('carrusel.edit',compact('carrusel'));
     }
 
     /**
@@ -70,7 +98,39 @@ class CarruselController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        if($request->url_imagen){
+            
+            if ($request->hasFile('url_imagen')) {
+
+      
+
+                $image = $request->file('url_imagen');
+                $name = 'carrusel'.time().'.'.$image->getClientOriginalExtension();
+                $destinationPath = public_path('/imagenes/carrusel/');
+                $image->move($destinationPath, $name);
+    
+                
+                 $registro = carrucel::find($id);
+                 $registro->titulo = $request->titulo;
+                 $registro->descripcion = $request->descripcion;
+                
+		         $registro->img_url =$request->root().'/imagenes/carrusel'.'/'.$name;
+                
+	        	$registro->save();
+                 
+                    return  Redirect::to('/carrusel');
+            }
+        }else{
+            $registro = carrucel::find($id);
+            $registro->titulo = $request->titulo;
+            $registro->descripcion = $request->descripcion;
+           
+          
+           
+            $registro->save();
+            
+               return  Redirect::to('/carrusel');
+        }
     }
 
     /**
@@ -81,6 +141,8 @@ class CarruselController extends Controller
      */
     public function destroy($id)
     {
-        //
+      carrucel::destroy($id);
+      return Redirect::to('/carrusel');
+       
     }
 }

@@ -3,10 +3,7 @@
 @section('content')
 
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-  <ol class="breadcrumb mb-4">
-    <li class="breadcrumb-item"><a href="/home">Dashboard</a></li>
-    <li class="breadcrumb-item active">Carrusel</li>
-</ol>
+           
             
           </div>
           <div>

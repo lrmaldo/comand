@@ -18,6 +18,7 @@ class CreateCarrucel extends Migration
             $table->string('titulo')->comment('una titulo de la imagen');
             $table->text('descripcion')->comment('una descripcion de la imagen');
             $table->string('url_imagen')->comment('se guarda el url de la imagen');
+            $table->timestamps();
             
         });
     }
