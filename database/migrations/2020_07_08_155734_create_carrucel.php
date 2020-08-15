@@ -15,8 +15,8 @@ class CreateCarrucel extends Migration
     {
         Schema::create('carrusel', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('titulo')->comment('una titulo de la imagen');
-            $table->text('descripcion')->comment('una descripcion de la imagen');
+            $table->string('titulo')->nullable()->comment('una titulo de la imagen');
+            $table->text('descripcion')->nullable()->comment('una descripcion de la imagen');
             $table->string('url_imagen')->comment('se guarda el url de la imagen');
             $table->timestamps();
             

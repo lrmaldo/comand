@@ -20,6 +20,8 @@ class DatosController extends Controller
         return view('datos.edit',compact('datos')); */
          $datos = Tienda::find($id);
          $datos->update($request->all());
-       return Redirect::to('/datos')   ;
+       //return Redirect::to('/datos')   ;
+
+       return redirect('datos')->with('success','¡Se guardo correctamente los datos!');
      }
 }

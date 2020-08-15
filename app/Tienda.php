@@ -13,5 +13,5 @@ class Tienda extends Model
      * @var array
      */
     protected $fillable = [
-        'id', 'nombre','descripcion','telefono','correo','facebook'];
+        'id', 'nombre','descripcion','telefono','correo','facebook', 'pinterest','instagram'];
 }

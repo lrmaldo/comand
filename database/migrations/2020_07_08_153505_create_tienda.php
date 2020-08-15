@@ -14,12 +14,15 @@ class CreateTienda extends Migration
     public function up()
     {
         Schema::create('tienda', function (Blueprint $table) {
+            
             $table->increments('id');
             $table->string('nombre');
-            $table->text('descripcion');
-            $table->string('telefono');
-            $table->string('correo');
-            $table->string('facebook',500);
+            $table->text('descripcion')->nullable();
+            $table->string('telefono')->nullable();
+            $table->string('correo')->nullable();
+            $table->text('facebook')->nullable();
+            $table->text('pinterest')->nullable();
+            $table->text('instagram')->nullable();
             $table->timestamps();
         });
     }
