@@ -47,9 +47,7 @@
                         <label class="col-md-4 control-label">Descripcion del negocio:*</label>
                     </div>
                     <div class="col-md-8">
-                        <textarea class="form-control" id="descripcion" name="descripcion" rows="4">
-                        {{ $datos->descripcion }}
-                        </textarea>
+                        <textarea class="form-control" id="descripcion" name="descripcion" rows="10" cols="50">{{ $datos->descripcion }}</textarea>
                     </div>
                 </div>
 

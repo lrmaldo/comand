@@ -16,4 +16,12 @@ class InicioController extends Controller
        return view('welcome',compact(['carrusel','productos','datos']));
      // return $carrusel;
     }
+    public function privacidad(){
+        $datos = Tienda::where('id',1)->first();
+        return view('politica',compact('datos'));
+    }
+    public function terminos(){
+        $datos = Tienda::where('id',1)->first();
+        return view('terminos',compact('datos'));
+    }
 }

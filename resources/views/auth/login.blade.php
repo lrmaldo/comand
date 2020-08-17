@@ -8,7 +8,7 @@
     <meta name="description" content="Login" />
     <meta name="author" content="Ing. Leonardo Maldonado" />
     <title>Login</title>
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="{{asset('css/backstyles.css')}}" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
 </head>
 
@@ -71,11 +71,11 @@
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid">
                     <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Your Website 2020</div>
+                        <div class="text-muted">Copyright &copy;  2020</div>
                         <div>
-                            <a href="#">Privacy Policy</a>
+                            <a href="#">Politica de privacidad</a>
                             &middot;
-                            <a href="#">Terms &amp; Conditions</a>
+                            <a href="#">Terminos &amp; Condiciones</a>
                         </div>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/backscripts.js"></script>
 </body>
 
 </html>

@@ -18,7 +18,7 @@
                                 <div class="divider-custom-line"></div>
                             </div>
                             <!-- Portfolio Modal - Image-->
-                            <img class="img-fluid rounded mb-5" src="{{$item->url_imagen}}" alt="" />
+                            <img class="img-fluid rounded mb-3" style="height: 350px" src="{{$item->url_imagen}}" alt="" />
                             <!-- Portfolio Modal - Text-->
                             <p class="mb-5">{{$item->descripcion}}</p> <br>
                             <h4 class="mb-4">${{number_format($item->precio,2)}} MXN</h4>

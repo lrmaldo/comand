@@ -169,29 +169,29 @@
               <form id="contactForm" name="sentMessage" novalidate="novalidate">
                   <div class="control-group">
                       <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                          <label>Name</label>
-                          <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name." />
+                          <label>Nombre</label>
+                          <input class="form-control" id="name" type="text" placeholder="Nombre" required="required" data-validation-required-message="Please enter your name." />
                           <p class="help-block text-danger"></p>
                       </div>
                   </div>
                   <div class="control-group">
                       <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                          <label>Email Address</label>
-                          <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address." />
+                          <label>Correo electrónico</label>
+                          <input class="form-control" id="email" type="email" placeholder="Correo Electrónico" required="required" data-validation-required-message="Please enter your email address." />
                           <p class="help-block text-danger"></p>
                       </div>
                   </div>
                   <div class="control-group">
                       <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                          <label>Phone Number</label>
-                          <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number." />
+                          <label>Teléfono</label>
+                          <input class="form-control" id="phone" type="tel" placeholder="Teléfono" required="required" data-validation-required-message="Please enter your phone number." />
                           <p class="help-block text-danger"></p>
                       </div>
                   </div>
                   <div class="control-group">
                       <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                          <label>Message</label>
-                          <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea>
+                          <label>Mensaje</label>
+                          <textarea class="form-control" id="message" rows="5" placeholder="Mensaje" required="required" data-validation-required-message="Please enter a message."></textarea>
                           <p class="help-block text-danger"></p>
                       </div>
                   </div>
@@ -218,11 +218,12 @@
               </p>
           </div>
           <!-- Footer Social Icons-->
-          <div class="col-lg-4 mb-5 mb-lg-0">
+          <div class="col-lg-6 mb-6 mb-lg-0">
               <h4 class="text-uppercase mb-4">Siguenos</h4>
           <a class="btn btn-outline-light btn-social mx-4" href="{{$datos->facebook}}"><i class="fab fa-fw fa-facebook-f"></i></a>
           <a class="btn btn-outline-light btn-social mx-4" href=" https://wa.me/521{{$datos->telefono}}"><i class="fab fa-whatsapp"></i></a>
           <a class="btn btn-outline-light btn-social mx-4" href="{{$datos->pinterest}}"><i class="fab fa-pinterest"></i></a>
+          <a class="btn btn-outline-light btn-social mx-4" href="{{$datos->instagram}}"><i class="fab fa-instagram"></i></a>
            {{--    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a> --}}
           </div>
           <!-- Footer 	fab fa-whatsapp  fab fa-pinterest  About Text-->
@@ -239,7 +240,14 @@
 </footer>
 <!-- Copyright Section-->
 <div class="copyright py-4 text-center text-white">
-  <div class="container"><small>Copyright © {{$datos->nombre}} 2020</small> <br> <small>Desarrollado por: <a href="http://lrmaldo.github.io">lrmaldo</a></small></div>
+  <div class="container"><small>
+      Copyright © {{$datos->nombre}} 2020</small> <br> 
+      <small>Desarrollado por: <a href="http://lrmaldo.github.io">lrmaldo</a></small>
+       <br>
+      <a href="/privacidad">Politicas de privacidad</a>
+      &middot;
+      <a href="/terminos">Terminos &amp; Condiciones</a>
+    </div>
 </div>
 <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
 <div class="scroll-to-top d-lg-none position-fixed">
@@ -255,8 +263,8 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <!-- Contact form JS-->
-        <script src="assets/mail/jqBootstrapValidation.js"></script>
-        <script src="assets/mail/contact_me.js"></script>
+        <script src="js/jqBootstrapValidation.js"></script>
+        <script src="js/contact_me.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>

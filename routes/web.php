@@ -13,6 +13,7 @@
 
 
 
+
 Route::get('/','InicioController@index');
 
 Auth::routes();
@@ -27,5 +28,12 @@ Route::POST('carrusel/store','CarruselController@store');
 Route::delete('carrusel/destroy/{id}','CarruselController@destroy');
 
 Route::resource('datos','DatosController');
+Route::POST('datos/store',[
+    'as'=>'datos.store',
+    'uses'=>'DatosController@store'
+]);
+
+Route::get('/privacidad','InicioController@privacidad');
+Route::get('/terminos','InicioController@terminos');
 //Route::PUT('datos/update/{id}','DatosController@update');
 //Route::get('carrusel/create',"CarruselController@create")->name('carrusel/create');
